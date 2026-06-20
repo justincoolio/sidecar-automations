@@ -46,9 +46,9 @@
           <p class="hero-intro">sidecar-automations builds custom automation tools for businesses that repeatedly clean, combine, check, format, or transform files by hand.</p>
           <div class="button-group">
             <a class="button" href="#contact">Start a Project</a>
-            <a class="button button-secondary" href="#examples">See Examples</a>
+            <a class="button button-secondary" href="https://app.sidecar-automations.com/demo">Try the Demo</a>
           </div>
-          <p class="hero-note">Built around the files, rules, and outputs your team already uses.</p>
+          <p class="hero-note">Try a sample automation that turns a messy sales lead CSV into a cleaned Excel workbook with summary metrics and rows flagged for review.</p>
         </div>
 
         <div class="workflow-panel" aria-label="Example automated workflow">
@@ -81,6 +81,22 @@
           </ol>
           <div class="panel-footer"><span>Process time</span><strong>Under a minute</strong></div>
         </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="container demo-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Sample automation</p>
+          <h2>See it in action</h2>
+          <p>Follow a simple upload-and-download workflow using sample sales lead data.</p>
+          <a class="button" href="https://app.sidecar-automations.com/demo">Open the Demo</a>
+        </div>
+        <ol class="demo-steps">
+          <li><span>1</span><div><h3>Download the messy sample CSV</h3><p>Start with the sample file provided in the demo.</p></div></li>
+          <li><span>2</span><div><h3>Upload it to the demo tool</h3><p>Run the sample automation in your browser.</p></div></li>
+          <li><span>3</span><div><h3>Download the cleaned Excel workbook</h3><p>Review the summary metrics and rows flagged for review.</p></div></li>
+        </ol>
       </div>
     </section>
 
@@ -196,10 +212,9 @@
       <div class="container contact-grid">
         <div class="contact-copy">
           <p class="eyebrow">Start with the process you have now</p>
-          <h2>Have a file-based process your team keeps doing by hand?</h2>
-          <p>Send a short description of the current process, what files are involved, any rules or checks, and what the finished output should look like. If available, attach one example input file and one example finished output file to your inquiry email.</p>
-          <!-- EMAIL ADDRESS: Replace this placeholder everywhere before publishing. -->
-          <a class="contact-email" href="mailto:hello@sidecar-automations.com">hello@sidecar-automations.com</a>
+          <h2>Need a custom automation?</h2>
+          <p>Send over the file you start with, the output you need, and how often you run the process. I’ll review the workflow and let you know what can be automated.</p>
+          <a class="contact-email" href="mailto:justin@sidecar-automations.com">justin@sidecar-automations.com</a>
         </div>
         <form class="contact-form" id="contact-form">
           <div class="form-row">
@@ -216,12 +231,43 @@
           </div>
           <div class="form-row">
             <label for="process-description">What files or process do you want turned into a tool?</label>
-            <textarea id="process-description" name="process-description" rows="5" required placeholder="For example: Every month, we export two reports, clean the data, compare totals, and create a final spreadsheet for review. I can attach a sample input file and an example of the finished output."></textarea>
+            <textarea id="process-description" name="process-description" rows="3" required placeholder="For example: a sales lead CSV exported from our CRM."></textarea>
+          </div>
+          <div class="form-row">
+            <label for="output-needed">What output do you need?</label>
+            <textarea id="output-needed" name="output-needed" rows="3" required placeholder="For example: a cleaned Excel workbook with a summary tab."></textarea>
+          </div>
+          <div class="form-row">
+            <label for="frequency">How often do you run this process?</label>
+            <input type="text" id="frequency" name="frequency" required>
+          </div>
+          <div class="form-row">
+            <label for="manual-time">How long does it take manually?</label>
+            <input type="text" id="manual-time" name="manual-time" required>
+          </div>
+          <div class="form-row">
+            <label for="sensitive-data">Does the file contain sensitive data?</label>
+            <select id="sensitive-data" name="sensitive-data" required>
+              <option value="">Select an answer</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <option value="Not sure">Not sure</option>
+            </select>
           </div>
           <p class="form-warning"><strong>Before sending example files:</strong> Please remove or redact sensitive information. Do not include Social Security numbers, bank information, medical information, passwords, or confidential customer data.</p>
-          <button class="button" type="submit">Send Project Details</button>
+          <button class="button" type="submit">Request a Custom Automation</button>
           <p class="form-note">This opens your email app with the project details filled in. Please attach any example input files and expected output files manually before sending.</p>
         </form>
+      </div>
+    </section>
+
+    <section class="section closing-cta">
+      <div class="container closing-cta-inner">
+        <div>
+          <h2>Not sure what can be automated?</h2>
+          <p>Send over the process and I’ll help you figure out what’s worth building.</p>
+        </div>
+        <a class="button button-secondary" href="mailto:justin@sidecar-automations.com?subject=Custom%20Automation%20Inquiry&amp;body=Hi%20Justin%2C%0A%0AI%E2%80%99m%20interested%20in%20a%20custom%20automation.%0A%0AOrganization%3A%0AFile%20I%20start%20with%3A%0AOutput%20I%20need%3A%0AHow%20often%20I%20run%20this%3A%0AHow%20long%20it%20takes%20manually%3A%0ADoes%20the%20file%20contain%20sensitive%20data%3A%0A%0AThanks%2C">Request a Custom Automation</a>
       </div>
     </section>
   </main>

@@ -1,5 +1,4 @@
-// Site settings: update this email address before publishing.
-const CONTACT_EMAIL = "hello@sidecar-automations.com";
+const CONTACT_EMAIL = "justin@sidecar-automations.com";
 
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
@@ -38,9 +37,13 @@ contactForm.addEventListener("submit", (event) => {
   const email = formData.get("email");
   const organization = formData.get("organization") || "Not provided";
   const process = formData.get("process-description");
-  const subject = encodeURIComponent(`Project inquiry from ${name}`);
+  const output = formData.get("output-needed");
+  const frequency = formData.get("frequency");
+  const manualTime = formData.get("manual-time");
+  const sensitiveData = formData.get("sensitive-data");
+  const subject = encodeURIComponent("Custom Automation Inquiry");
   const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\n\nCurrent process, files, rules, and expected output:\n${process}\n\nPlease attach any redacted example input and expected output files before sending.`
+    `Hi Justin,\n\nI’m interested in a custom automation.\n\nName: ${name}\nEmail: ${email}\nOrganization: ${organization}\nFile I start with: ${process}\nOutput I need: ${output}\nHow often I run this: ${frequency}\nHow long it takes manually: ${manualTime}\nDoes the file contain sensitive data: ${sensitiveData}\n\nThanks,`
   );
 
   window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
