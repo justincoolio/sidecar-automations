@@ -1,5 +1,3 @@
-const CONTACT_EMAIL = "justin@sidecar-automations.com";
-
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 
@@ -25,28 +23,6 @@ document.addEventListener("keydown", (event) => {
     siteNav.classList.remove("is-open");
     navToggle.focus();
   }
-});
-
-const contactForm = document.querySelector("#contact-form");
-
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(contactForm);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const organization = formData.get("organization") || "Not provided";
-  const process = formData.get("process-description");
-  const output = formData.get("output-needed");
-  const frequency = formData.get("frequency");
-  const manualTime = formData.get("manual-time");
-  const sensitiveData = formData.get("sensitive-data");
-  const subject = encodeURIComponent("Custom Automation Inquiry");
-  const body = encodeURIComponent(
-    `Hi Justin,\n\nI’m interested in a custom automation.\n\nName: ${name}\nEmail: ${email}\nOrganization: ${organization}\nFile I start with: ${process}\nOutput I need: ${output}\nHow often I run this: ${frequency}\nHow long it takes manually: ${manualTime}\nDoes the file contain sensitive data: ${sensitiveData}\n\nThanks,`
-  );
-
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 });
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();
